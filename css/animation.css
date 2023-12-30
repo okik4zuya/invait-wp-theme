@@ -1,0 +1,63 @@
+    @-webkit-keyframes waving
+
+    /* Safari and Chrome */
+        {
+        0% {
+            -webkit-transform: rotate(0deg);
+            -o-transform: rotate(0deg);
+            transform: rotate(0deg);
+            transform-origin: bottom left;
+        }
+
+        50% {
+            -webkit-transform: rotate(var(--waving-deg));
+            -o-transform: rotate(var(--waving-deg));
+            transform: rotate(var(--waving-deg));
+            transform-origin: bottom left;
+        }
+
+        100% {
+            webkit-transform: rotate(0deg);
+            -o-transform: rotate(0deg);
+            transform: rotate(0deg);
+            transform-origin: bottom left;
+        }
+    }
+
+    @keyframes waving {
+        0% {
+            -ms-transform: rotate(0deg);
+            -moz-transform: rotate(0deg);
+            -webkit-transform: rotate(0deg);
+            -o-transform: rotate(0deg);
+            transform: rotate(0deg);
+            transform-origin: bottom left;
+        }
+
+        50% {
+            -ms-transform: rotate(var(--waving-deg));
+            -moz-transform: rotate(var(--waving-deg));
+            -webkit-transform: rotate(var(--waving-deg));
+            -o-transform: rotate(var(--waving-deg));
+            transform: rotate(var(--waving-deg));
+            transform-origin: bottom left;
+        }
+
+        100% {
+            -ms-transform: rotate(0deg);
+            -moz-transform: rotate(0deg);
+            -webkit-transform: rotate(0deg);
+            -o-transform: rotate(0deg);
+            transform: rotate(0deg);
+            transform-origin: bottom left;
+        }
+
+    }
+
+    .waving {
+        -webkit-animation: waving 4s ease-in-out infinite;
+        -moz-animation: waving 4s ease-in-out infinite;
+        -ms-animation: waving 4s ease-in-out infinite;
+        -o-animation: waving 4s ease-in-out infinite;
+        animation: waving 4s ease-in-out infinite;
+    }
