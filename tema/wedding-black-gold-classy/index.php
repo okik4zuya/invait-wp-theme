@@ -84,7 +84,7 @@ $judul_ucapan = iie(get_field('judul_ucapan'), 'Ucapan');
 $narasi_ucapan = iie(get_field('narasi_ucapan'), 'Sampaikan doa terbaik anda kepada kedua mempelai.');
 
 // Section Audio
-$audio_src = 'http://localhost/invait/wp-content/uploads/2023/12/beutiful-in-white.mp3';
+$audio_src = get_field('audio_src');
 
 
 

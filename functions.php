@@ -2,6 +2,10 @@
 
 require(get_theme_file_path('/inc/rest-filter-message.php'));
 require(get_theme_file_path('/inc/rest-post-message.php'));
+
+// Disable gutenberg editor
+add_filter('use_block_editor_for_post', '__return_false');
+
 function invait_include_files()
 {
     wp_enqueue_script('jquery');
@@ -17,7 +21,7 @@ add_action('wp_enqueue_scripts', 'invait_include_files');
 function invait_post_types(){
     register_post_type('message', array(
         'show_in_rest' => true,
-        //'supports' => array('title', 'editor', 'excerpt'),
+        'supports' => array('title'),
         'rewrite' => array('slug' => 'messages'),
         'has_archive' => true,
         'public'=> true,
