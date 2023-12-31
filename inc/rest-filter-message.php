@@ -4,7 +4,7 @@ add_action('rest_api_init', 'restFilterMessage');
 
 function restFilterMessage()
 {
-    register_rest_route('invait/v1', 'filter', array(
+    register_rest_route('invait/v1', 'filter_message', array(
         'methods' => WP_REST_SERVER::READABLE,
         'callback' => 'invaitFilterMessageResults'
     ));

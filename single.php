@@ -13,12 +13,12 @@ while (have_posts()) {
 
 <?php
 //Include main style
-get_template_part('tema/' . get_field('tema') . '/style');
+get_template_part('tema/' . get_field('tema')->post_name . '/style');
 ?>
 
 <?php
 //Include main template
-get_template_part('tema/' . get_field('tema') . '/index');
+get_template_part('tema/' . get_field('tema')->post_name . '/index');
 ?>
 
 <script><?php
@@ -35,7 +35,7 @@ get_template_part('js/countdown-js');
 ?>
 
 <?php
-get_template_part('tema/' . get_field('tema') . '/script');
+get_template_part('tema/' . get_field('tema')->post_name . '/script');
 ?>
 
 <?php get_footer(); ?>
