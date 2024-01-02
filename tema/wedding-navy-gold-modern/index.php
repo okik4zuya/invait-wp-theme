@@ -8,10 +8,9 @@ function iie($value, $fallback)
 }
 
 //define assets
-$savethedate = get_site_url() . '/wp-content/uploads/2023/12/save-the-date.png';
-$ornament_left = get_site_url() . '/wp-content/uploads/2023/12/ornament-left.png';
-$ornament_right = get_site_url() . '/wp-content/uploads/2023/12/ornament-right.png';
-$light_bubble = get_site_url() . '/wp-content/uploads/2023/12/light-bubble.png';
+$savethedate = get_site_url() . '/wp-content/uploads/2024/01/save-the-date-2-Small.png';
+$ornament_top = get_site_url() . '/wp-content/uploads/2024/01/wedding-navy-gold-modern-ornament-top.png';
+$ornament_bottom = get_site_url() . '/wp-content/uploads/2024/01/wedding-navy-gold-modern-ornament-bottom.png';
 
 //Define features
 $is_enabled_audio = get_field('fitur_audio');
@@ -93,7 +92,7 @@ $audio_src = get_field('audio_src');
 <div id='main-container'>
     <?php if ($is_enabled_audio == true) { ?>
         <div id='audio'>
-            <audio loop='true'>
+            <audio loop='true' autoplay>
                 <source src='<?php echo $audio_src ?>' type="audio/mpeg" />
             </audio>
             <div class='audio__icon'></div>
@@ -103,7 +102,6 @@ $audio_src = get_field('audio_src');
     <div id='desktop-cover' class='bg-image pure-u-5-8'>
         <div class='bg-layer'></div>
         <div class='desktop-cover__content'>
-            <div class="savethedate"> <img src='<?php echo $savethedate; ?>'></img> </div>
             <div class='judul-cover'>
                 <?php echo $judul_cover; ?>
             </div>
@@ -126,25 +124,19 @@ $audio_src = get_field('audio_src');
     <div id='invitation-container' class='pure-u-1 pure-u-md-3-8'>
         <!-- Background -->
         <section id='background' class='bg-image'>
-            <div class='ornament-left waving'> <img src='<?php echo $ornament_left; ?>' /> </div>
-            <div class='ornament-right waving'> <img src='<?php echo $ornament_right; ?>' /> </div>
-            <div class='light-bubble-top'> <img src='<?php echo $light_bubble; ?>' /> </div>
-            <div class='light-bubble-bottom'> <img src='<?php echo $light_bubble; ?>' /> </div>
         </section>
         <!-- Section Floating Cover -->
         <section id='floating-cover' class='bg-image'>
-            <div class='ornament-left waving'> <img src='<?php echo $ornament_left; ?>' /> </div>
-            <div class='ornament-right waving'> <img src='<?php echo $ornament_right; ?>' /> </div>
-            <div class='light-bubble-top'> <img src='<?php echo $light_bubble; ?>' /> </div>
-            <div class='light-bubble-bottom'> <img src='<?php echo $light_bubble; ?>' /> </div>
+            <div class='ornament-top-left'> <img src='<?php echo $ornament_top; ?>' /> </div>
+            <div class='ornament-top-right'> <img src='<?php echo $ornament_top; ?>' /> </div>
+            <div class='ornament-bottom'> <img src='<?php echo $ornament_bottom; ?>' /> </div>
             <div class='judul-cover'>
                 <?php echo $judul_cover; ?>
             </div>
-            <div class='mempelai'>
+            <div class='mempelai mb-10'>
                 <?php echo $nama1; ?> &
                 <?php echo $nama2; ?>
             </div>
-            <div class="savethedate"> <img src='<?php echo $savethedate; ?>'></img> </div>
             <div class='tanggal-cover'>
                 <?php echo $teks_tanggal; ?>
             </div>
@@ -157,10 +149,9 @@ $audio_src = get_field('audio_src');
 
         <!-- Section Cover -->
         <section id='cover' data-bg='#c8a051'>
-            <div class='ornament-left waving'> <img src='<?php echo $ornament_left; ?>' /> </div>
-            <div class='ornament-right waving'> <img src='<?php echo $ornament_right; ?>' /> </div>
-            <div class='light-bubble-top'> <img src='<?php echo $light_bubble; ?>' /> </div>
-            <div class='light-bubble-bottom'> <img src='<?php echo $light_bubble; ?>' /> </div>
+            <div class='ornament-top-left'> <img src='<?php echo $ornament_top; ?>' /> </div>
+            <div class='ornament-top-right'> <img src='<?php echo $ornament_top; ?>' /> </div>
+            <div class='ornament-bottom'> <img src='<?php echo $ornament_bottom; ?>' /> </div>
             <div class='judul-cover'>
                 <?php echo $judul_cover; ?>
             </div>
@@ -234,37 +225,43 @@ $audio_src = get_field('audio_src');
             </div>
             <div class='acara__container mt-4 pure-g'>
                 <div class='acara__akad pure-u-1 pure-u-md-1/2' data-aos='fade-left'>
-                    <div class='acara__judul'>
-                        <?php echo $acara1_judul; ?>
-                    </div>
-                    <div class='acara__hari mt-2'>
-                        <?php echo $acara1_hari ?>
-                    </div>
-                    <div class='acara__tanggal mt-2'>
-                        <?php echo $acara1_tanggal ?>
-                    </div>
-                    <div class='acara__jam mt-2'>
-                        <?php echo $acara1_jam ?>
-                    </div>
-                    <div class='acara__lokasi mt-2'>
-                        <?php echo $acara1_lokasi ?>
+                    <div class='acara__ornament'></div>
+                    <div class='acara__konten'>
+                        <div class='acara__judul'>
+                            <?php echo $acara1_judul; ?>
+                        </div>
+                        <div class='acara__hari mt-2'>
+                            <?php echo $acara1_hari ?>
+                        </div>
+                        <div class='acara__tanggal mt-2'>
+                            <?php echo $acara1_tanggal ?>
+                        </div>
+                        <div class='acara__jam mt-2'>
+                            <?php echo $acara1_jam ?>
+                        </div>
+                        <div class='acara__lokasi mt-2'>
+                            <?php echo $acara1_lokasi ?>
+                        </div>
                     </div>
                 </div>
                 <div class='acara__resepsi pure-u-1 pure-u-md-1/2' data-aos='fade-right'>
-                    <div class='acara__judul'>
-                        <?php echo $acara2_judul; ?>
-                    </div>
-                    <div class='acara__hari mt-2'>
-                        <?php echo $acara2_hari ?>
-                    </div>
-                    <div class='acara__tanggal mt-2'>
-                        <?php echo $acara2_tanggal ?>
-                    </div>
-                    <div class='acara__jam mt-2'>
-                        <?php echo $acara2_jam ?>
-                    </div>
-                    <div class='acara__lokasi mt-2'>
-                        <?php echo $acara2_lokasi ?>
+                    <div class='acara__ornament'></div>
+                    <div class='acara__konten'>
+                        <div class='acara__judul'>
+                            <?php echo $acara2_judul; ?>
+                        </div>
+                        <div class='acara__hari mt-2'>
+                            <?php echo $acara2_hari ?>
+                        </div>
+                        <div class='acara__tanggal mt-2'>
+                            <?php echo $acara2_tanggal ?>
+                        </div>
+                        <div class='acara__jam mt-2'>
+                            <?php echo $acara2_jam ?>
+                        </div>
+                        <div class='acara__lokasi mt-2'>
+                            <?php echo $acara2_lokasi ?>
+                        </div>
                     </div>
 
                 </div>
@@ -346,7 +343,7 @@ $audio_src = get_field('audio_src');
             <div class='ucapan__narasi narasi mb-8' data-aos="fade-down">
                 <?php echo $narasi_ucapan ?>
             </div>
-            <div class='ucapan__form mb-8'>
+            <div class='ucapan__form mb-8' data-aos='zoom-in'>
                 <div>
                     <input id='ucapan__input__title' placeholder='Nama'>
                     <textarea id='ucapan__input__content' rows='3' placeholder='Ucapan'></textarea>

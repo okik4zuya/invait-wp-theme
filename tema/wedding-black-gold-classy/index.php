@@ -346,7 +346,7 @@ $audio_src = get_field('audio_src');
             <div class='ucapan__narasi narasi mb-8' data-aos="fade-down">
                 <?php echo $narasi_ucapan ?>
             </div>
-            <div class='ucapan__form mb-8'>
+            <div class='ucapan__form mb-8' data-aos='zoom-in'>
                 <div>
                     <input id='ucapan__input__title' placeholder='Nama'>
                     <textarea id='ucapan__input__content' rows='3' placeholder='Ucapan'></textarea>

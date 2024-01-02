@@ -1,9 +1,12 @@
 <?php 
 
-require(get_theme_file_path('/inc/rest-filter-message.php'));
-require(get_theme_file_path('/inc/rest-post-message.php'));
-require(get_theme_file_path('/inc/rest-get-tema.php'));
-require(get_theme_file_path('/inc/rest-get-total-tema.php'));
+//require(get_theme_file_path('/inc/acf/custom-field.php'));
+//require(get_theme_file_path('/inc/acf/taxonomy.php'));
+
+require(get_theme_file_path('/inc/rest/rest-filter-message.php'));
+require(get_theme_file_path('/inc/rest/rest-post-message.php'));
+require(get_theme_file_path('/inc/rest/rest-get-tema.php'));
+require(get_theme_file_path('/inc/rest/rest-get-total-tema.php'));
 
 // Disable gutenberg editor
 add_filter('use_block_editor_for_post', '__return_false');

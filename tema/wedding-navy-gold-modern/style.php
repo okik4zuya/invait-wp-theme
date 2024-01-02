@@ -1,23 +1,28 @@
 <?php
 $title = get_field('tema');
-
-$cover_background = get_site_url() . '/wp-content/uploads/2023/12/pexels-dmitry-zvolskiy-1676123-Small.jpg';
+$cover_background = get_field('cover_background');
 $galeri1 = get_site_url() . '';
+$ornament_top = get_site_url() . '/wp-content/uploads/2024/01/wedding-navy-gold-modern-ornament-top.png';
 
 ?>
 <style>
-    @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Hedvig+Letters+Serif:opsz@12..24&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Arima&display=swap');
+    @font-face {
+        font-family: 'Stay Gracious';
+        src: url('<?php echo get_theme_file_uri('assets/fonts/stay-gracious.otf'); ?>');
+    }
 
     :root {
-        --font-base: 'Hedvig Letters Serif', serif;
-        --font-art: 'Great Vibes', cursive;
+        --font-base: 'Arima';
+        --font-art: 'Stay Gracious', cursive;
         --fs-judul: 3em;
         --fs-paragraf: 1em;
         --fw-judul: 700;
         --fw-paragraf: 400;
-        --color-bg: #fff;
-        --color-base: #c8a051;
-        --color-base-transparent25: #c8a05140;
+        --color-bg: #2b394d;
+        --color-bg-transparent25: #2b394d80;
+        --color-base: #dbd293;
+        --color-base-transparent25: #dbd29340;
         --waving-deg: 5deg;
     }
 
@@ -27,7 +32,7 @@ $galeri1 = get_site_url() . '';
 
     body {
         background-color: #000000;
-        color: #c8a051;
+        color: var(--color-base);
         font-family: var(--font-base);
         box-sizing: border-box;
     }
@@ -36,7 +41,8 @@ $galeri1 = get_site_url() . '';
         width: 100%;
     }
 
-    input, textarea {
+    input,
+    textarea {
         padding: .5rem 1rem;
         width: 100%;
         border-radius: 8px;
@@ -168,7 +174,7 @@ $galeri1 = get_site_url() . '';
         width: 100vw;
     }
 
-    #audio{
+    #audio {
         position: fixed;
         left: 16px;
         bottom: 16px;
@@ -181,10 +187,10 @@ $galeri1 = get_site_url() . '';
         display: flex;
         justify-content: center;
         align-items: center;
-        
+
     }
 
-    #audio .audio__icon{
+    #audio .audio__icon {
         width: 28px;
         height: 28px;
     }
@@ -213,7 +219,7 @@ $galeri1 = get_site_url() . '';
         align-items: center;
         overflow: hidden;
         background-color: var(--color-bg);
-        
+
     }
 
     #floating-cover {
@@ -232,18 +238,24 @@ $galeri1 = get_site_url() . '';
 
     }
 
-    .ornament-left {
+    .ornament-top-left {
         position: absolute;
-        width: 160px;
-        top: 0;
-        left: -1.5rem;
+        width: 450px;
+        top: -180px;
+        left: -280px;
     }
 
-    .ornament-right {
+    .ornament-top-right {
         position: absolute;
-        width: 120px;
-        bottom: -1rem;
-        right: .5rem;
+        width: 500px;
+        top: -160px;
+        right: -320px;
+    }
+    .ornament-bottom {
+        position: absolute;
+        bottom: -100px;
+        right: 0;
+        left: 0;
     }
 
     .light-bubble-top {
@@ -279,7 +291,7 @@ $galeri1 = get_site_url() . '';
 
 
     .mempelai {
-        font-family: var(--font-base);
+        font-family: var(--font-art);
         font-size: 2rem;
         text-align: center;
     }
@@ -307,16 +319,18 @@ $galeri1 = get_site_url() . '';
         text-align: center;
     }
 
-    .avatar1, .avatar2{
+    .avatar1,
+    .avatar2 {
         width: 200px;
         height: 200px;
         overflow: hidden;
         border-radius: 50%;
         margin: 0 auto 1rem;
-        
+
     }
-    
-    .avatar1 img, .avatar2 img{
+
+    .avatar1 img,
+    .avatar2 img {
         width: 100%;
         object-position: center;
         object-fit: cover;
@@ -350,8 +364,27 @@ $galeri1 = get_site_url() . '';
 
     .acara__akad,
     .acara__resepsi {
+        margin: 2rem 1rem;
+        padding: 1rem;
+        text-align: center;
+    }
+    .acara__ornament{
+        position: absolute;
+        top: -6rem;
+        bottom: -6rem;
+        left: -6rem;
+        right: -6rem;
+        background-repeat: no-repeat;
+        background-image: url('<?php echo $ornament_top; ?>');
+        background-size: contain;
+        background-position: center;
+        z-index: 0;
+    }
+    .acara__konten{
+        position: relative;
         border: solid 4px var(--color-base);
-        margin: 1rem;
+        z-index: 1;
+        background-color: var(--color-bg-transparent25);
         padding: 1rem;
         text-align: center;
     }
@@ -440,7 +473,7 @@ $galeri1 = get_site_url() . '';
         font-size: 1.5rem;
     }
 
-    #footer{
+    #footer {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -448,7 +481,8 @@ $galeri1 = get_site_url() . '';
         padding: 1rem 0;
         margin-bottom: 4rem;
     }
-    #footer a{
+
+    #footer a {
         text-decoration: none;
         background-color: var(--color-base);
         color: var(--color-bg);

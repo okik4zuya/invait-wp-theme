@@ -34,7 +34,7 @@ $isEnabledAudio = get_field('fitur_audio');
         })
 
         // Setting Audio FUnctionality
-
+        refreshAudioIcon();
         $('#audio').on('click', () => {
             if (audioEl.paused == true) {
                 audioEl.play();
@@ -42,7 +42,7 @@ $isEnabledAudio = get_field('fitur_audio');
                 audioEl.pause();
             }
             refreshAudioIcon();
-        })
+        });
 
 
         // Ucapan List
