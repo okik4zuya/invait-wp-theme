@@ -8,13 +8,21 @@ require(get_theme_file_path('/inc/rest/rest-post-message.php'));
 require(get_theme_file_path('/inc/rest/rest-get-tema.php'));
 require(get_theme_file_path('/inc/rest/rest-get-total-tema.php'));
 
+//Helpers Functions
+function slugToSentence($slug) {
+    $text = str_replace('-', ' ', $slug);
+    $text = ucfirst($text);
+    return $text;
+}
+
 // Disable gutenberg editor
 add_filter('use_block_editor_for_post', '__return_false');
 
 function invait_include_files()
 {
     wp_enqueue_script('jquery');
-    //wp_enqueue_script('dayjs-relativetime', '/js/lib/dayjs-relativetime.js');
+    wp_enqueue_script('fullpage', get_theme_file_uri('/js/lib/fullpage.js'));
+    wp_enqueue_style('fullpage_css', get_theme_file_uri('/css/lib/fullpage.css'));
     wp_enqueue_style('spacing_css', get_theme_file_uri('/css/spacing.css'));
     wp_enqueue_style('pure_css', get_theme_file_uri('/css/lib/pure.css'));
     wp_enqueue_style('pure_grids_css', get_theme_file_uri('/css/lib/pure-grids.css'));

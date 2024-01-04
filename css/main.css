@@ -1,0 +1,324 @@
+@import url('https://fonts.googleapis.com/css2?family=Philosopher&display=swap');
+
+:root {
+    --color-invait-cyan: #2ff3e0;
+    --color-ivait-gold: #f8d210;
+    --color-invait-pink: #fa26a0;
+    --color-invait-chili-pepper: #f51720;
+    --color-text: #ffffff;
+    --color-bg: #f5f5f5;
+    --font-base: 'Philosopher'
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+.section,
+.slide {
+    position: relative;
+}
+
+.tema-container .fp-overflow {
+    background-color: aqua;
+    width: 100vw;
+    height: 100vh;
+}
+
+.tema-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.tema__content {
+    font-family: var(--font-base);
+    position: absolute;
+    display: flex;
+    align-items: end;
+    padding: 1rem;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, .2) 50%, rgba(0, 0, 0, 0.6) 100%);
+}
+
+.tema__kategori {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    background-color: var(--color-invait-chili-pepper);
+    padding: .5rem 1rem;
+    box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 0.75);
+    border-radius: .5rem;
+    font-weight: 700;
+
+}
+
+.invait-logo {
+    height: 64px;
+    display: flex;
+    align-items: center;
+}
+
+.invait-logo img {
+    width: 64px;
+    height: 64px;
+
+}
+
+.invait-logo-text {
+    font-size: 1.5rem;
+    color: #ffffff;
+    margin-left: .4rem;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.8);
+    font-family: var(--font-base);
+}
+
+.tags-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.single-tag {
+    cursor: pointer;
+    text-decoration: none;
+    color: #000000;
+    border: solid 1px #000000;
+    padding: .25rem .5rem;
+    margin: .25rem .25rem;
+    border-radius: .25rem;
+    box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 0.75);
+}
+
+.single-tag--active {
+    background-color: var(--color-invait-cyan);
+}
+
+.tema__button, .buat-undangan__button {
+    bottom: 1rem;
+    width: 80%;
+    display: flex;
+}
+.buat-undangan__button{
+    position: absolute;
+    bottom: 2rem;
+    display: flex;
+    justify-content: center;
+}
+.buat-undangan__button .buat-undangan{
+    width: 100%;
+}
+
+.tema__button .lihat-demo {
+    width: 100%;
+}
+
+button,
+.button {
+    background-color: var(--color-invait-cyan);
+    border-radius: .5rem;
+    border: none;
+    padding: .5rem 1rem;
+    font-weight: 700;
+    box-shadow: 5px 5px 0px 0px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 5px 5px 0px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 5px 5px 0px 0px rgba(0, 0, 0, 0.75);
+    text-decoration: none;
+    text-align: center;
+    color: #000000;
+}
+
+button.button-nav {
+    background-color: #f8d210;
+    height: 2.5rem;
+    width: 2.5rem;
+    border-radius: 50%;
+    padding: .2rem;
+    box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 0.75);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: .25rem 0;
+}
+
+.button-nav svg {
+    width: 1.8rem;
+    height: 1.8rem;
+}
+
+.tema__tags {
+    margin: 0 0 .5rem 0;
+}
+
+.tema__tag {
+    background-color: #fa26a0;
+    margin: 0 .2rem;
+    border-radius: 4px;
+    padding: .2rem .4rem;
+    font-size: .7rem;
+    font-weight: 700;
+    box-shadow: 3px 3px 0px 0px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 3px 3px 0px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 3px 3px 0px 0px rgba(0, 0, 0, 0.75);
+}
+
+#desktop-cover {
+    display: none;
+}
+
+.tema__number {
+    background-color: #f5f5f540;
+    border-radius: .5rem;
+    padding: .5rem;
+    color: #fff;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.side-menu {
+    background-color: var(--color-bg);
+    position: fixed;
+    top: 0;
+    left: 100%;
+    bottom: 0;
+    width: 100%;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 1s;
+}
+
+.side-menu.opened {
+    transform: translateX(-100%);
+}
+
+.side-menu .exit {
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+
+}
+
+.invait-logo-cover {
+    width: 100px;
+    height: 100px;
+
+}
+
+.invait-logo-cover img {
+    width: 100%;
+    height: 100%;
+}
+
+.invait-logo-cover__text {
+    color: #000000;
+    font-size: 2rem;
+    margin-left: .4rem;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.8);
+    font-family: var(--font-base);
+
+}
+
+.desktop-cover__description {
+    text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+    .side-menu {
+        display: none;
+    }
+
+    .main-container {
+        display: flex;
+        justify-content: end;
+        background-color: var(--color-bg);
+    }
+
+    #fullpage {
+        width: 30%;
+    }
+
+    #desktop-cover {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 70%;
+    }
+
+    .desktop-cover__content {
+        position: relative;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 2;
+        padding: 4rem;
+    }
+
+    .bg-image {
+        background-position: center;
+        background-size: cover;
+    }
+
+    .bg-layer {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background-color: black;
+        opacity: .6;
+        z-index: 0;
+    }
+
+    .button-nav.nav-filter {
+        display: none;
+    }
+
+}
+
+
+.tema__judul {
+    margin: 0 0 .5rem 0;
+    color: var(--color-text);
+    font-size: 1.2rem;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.8);
+}
+
+
+.content__main {
+    width: 84%;
+    height: auto;
+    padding: 0 .5rem;
+}
+
+.content__nav {
+    width: 16%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    top: .3rem;
+
+}
