@@ -1,8 +1,17 @@
 jQuery(document).ready(function ($) {
-    var siteUrl = 'http://localhost/invait';
+    //Variables Definition
+    var siteUrl = document.querySelector('.main-container').dataset.siteUrl;
     var foundPosts = Number(document.querySelector('#fullpage').dataset.foundPosts);
     var filter = document.querySelector('#fullpage').dataset.filter;
     var fetchedPages = 1;
+
+    // Add active class to single-tag
+    var filter = document.querySelector('#fullpage').dataset.filter;
+    if(filter){
+        $('[data-slug='+filter+']').addClass('single-tag--active')
+    }else{
+        $('[data-slug=semua]').addClass('single-tag--active')
+    }
 
     $('#fullpage').fullpage({
         //options here
@@ -125,7 +134,9 @@ jQuery(document).ready(function ($) {
                     </div>
                 </div>
                 <div class='content__nav'>
+                <!--
                     <button class='button-nav nav-share'>${shareSVG}</button>
+                    -->
                     <button class='button-nav nav-home'>${homeSVG}</button>
                     <button class='button-nav nav-filter'>${menuSVG}</button>
                 </div>
@@ -133,9 +144,5 @@ jQuery(document).ready(function ($) {
         </div>
 `);
 
-    // Callback function append section
-    function appendSection() {
-        $('#fullpage').append(sectionTemplateHTML)
-    }
 });
 

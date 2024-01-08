@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Philosopher&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+
+@font-face {
+    font-family: 'Glacial Indiference';
+    src: url('wp-content/themes/invait/assets/fonts/GlacialIndifference-Regular.otf');
+}
+
+:root {
+    --color-invait-cyan: #2ff3e0;
+    --color-ivait-gold: #f8d210;
+    --color-invait-pink: #fa26a0;
+    --color-invait-chili-pepper: #f51720;
+    --color-text: #ffffff;
+    --color-bg: #f5f5f5;
+    --color-ink: #2c2626;
+    --color-shopee: #fe6032;
+    --color-whatsapp: #2bb741;
+    --font-invait: 'Philosopher';
+    --font-base: 'Glacial Indiference';
+}
+
+* {
+    box-sizing: border-box;
+}
+
+button,
+.button {
+    background-color: var(--color-invait-cyan);
+    border-radius: .5rem;
+    border: none;
+    padding: .5rem 1rem;
+    font-weight: 700;
+    box-shadow: 5px 5px 0px 0px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 5px 5px 0px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 5px 5px 0px 0px rgba(0, 0, 0, 0.75);
+    text-decoration: none;
+    text-align: center;
+    color: #000000;
+}
+
+.main-container {
+    background-color: var(--color-bg);
+    padding: 2rem;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--color-ink);
+    font-family: var(--font-base);
+}
+
+.frame {
+    width: 100%;
+    margin: .75rem 0;
+    border: solid 2px var(--color-ink);
+    border-radius: 1rem;
+    padding: 1rem;
+    box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 0.75);
+
+}
+
+.invait-logo-cover {
+    width: 100px;
+    height: 100px;
+
+}
+
+.invait-logo-cover img {
+    width: 100%;
+    height: 100%;
+}
+
+.invait-logo-cover__text {
+    color: var(--color-ink);
+    font-size: 2rem;
+    margin-left: .4rem;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.8);
+    font-family: var(--font-invait);
+}
+
+.invait-text {
+    font-family: var(--font-invait);
+    font-weight: 700;
+
+}
+
+.lihat-tema {
+    margin: 1rem 0 .5rem;
+    display: flex;
+    justify-content: center;
+
+}
+
+.judul {
+    font-family: var(--font-base);
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin: 0 0 .5rem 0;
+}
+.whatsapp-button, .shopee-button{
+    margin: 1rem 0 .5rem;
+    display: flex;
+    justify-content: center;
+}
+.whatsapp-button a{
+    background-color: var(--color-whatsapp);
+    color: #fff;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.8);
+
+}
+.shopee-button a{
+    background-color: var(--color-shopee);
+    color: #fff;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.8);
+}
+
+@media screen and (min-width: 768px) {
+    .frame {
+        width: 40%;
+    }
+
+}

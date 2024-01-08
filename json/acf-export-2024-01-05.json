@@ -395,11 +395,11 @@
         "show_in_rest": 0
     },
     {
-        "key": "group_659010f0eafc8",
+        "key": "group_6594823f6cdf8",
         "title": "Invitation - Section Cover",
         "fields": [
             {
-                "key": "field_659010f1b3fac",
+                "key": "field_6594823fb2233",
                 "label": "Judul Cover",
                 "name": "judul_cover",
                 "aria-label": "",
@@ -419,7 +419,7 @@
                 "append": ""
             },
             {
-                "key": "field_6590110bb3fad",
+                "key": "field_6594823fb5f41",
                 "label": "Nama 1",
                 "name": "nama_1",
                 "aria-label": "",
@@ -439,7 +439,7 @@
                 "append": ""
             },
             {
-                "key": "field_6590111ab3fae",
+                "key": "field_6594823fb9c5d",
                 "label": "Nama 2",
                 "name": "nama_2",
                 "aria-label": "",
@@ -459,7 +459,7 @@
                 "append": ""
             },
             {
-                "key": "field_65901121b3faf",
+                "key": "field_6594823fbd96e",
                 "label": "Teks Tanggal",
                 "name": "teks_tanggal",
                 "aria-label": "",
@@ -479,7 +479,7 @@
                 "append": ""
             },
             {
-                "key": "field_65946e1678d76",
+                "key": "field_6594823fc152e",
                 "label": "Cover Background",
                 "name": "cover_background",
                 "aria-label": "",
@@ -514,7 +514,7 @@
             ]
         ],
         "menu_order": 2,
-        "position": "side",
+        "position": "normal",
         "style": "default",
         "label_placement": "left",
         "instruction_placement": "label",

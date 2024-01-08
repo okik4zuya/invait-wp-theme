@@ -24,10 +24,10 @@ $kategori = isset($_GET['filter']) ? $_GET['filter'] : 'Semua';
 
 <style>
     <?php
-    include('css/main.css');
+    include('css/archive-tema.css');
     ?>
 </style>
-<div class='main-container'>
+<div class='main-container' data-site-url='<?php echo get_site_url(); ?>'>
     <div id='desktop-cover' class='bg-image pure-u-5-8'>
         <div class='desktop-cover__content'>
             <div class='invait-logo-cover'>
@@ -104,6 +104,7 @@ $kategori = isset($_GET['filter']) ? $_GET['filter'] : 'Semua';
                         </div>
                     </div>
                     <div class='content__nav'>
+                        <!--
                         <button class='button-nav nav-share'>
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
                                 <path fill-rule="evenodd"
@@ -112,6 +113,7 @@ $kategori = isset($_GET['filter']) ? $_GET['filter'] : 'Semua';
                             </svg>
 
                         </button>
+                            -->
                         <button class='button-nav nav-home'>
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
                                 <path
@@ -179,7 +181,6 @@ $kategori = isset($_GET['filter']) ? $_GET['filter'] : 'Semua';
 </div>
 <script><?php
 //Include JS before </body> tag
-include('js/main.js');
-include('js/fullpage-init.js');
+include('js/archive-tema.js');
 ?></script>
 <?php get_footer(); ?>
