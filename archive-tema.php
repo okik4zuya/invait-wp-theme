@@ -31,7 +31,7 @@ $kategori = isset($_GET['filter']) ? $_GET['filter'] : 'Semua';
     <div id='desktop-cover' class='bg-image pure-u-5-8'>
         <div class='desktop-cover__content'>
             <div class='invait-logo-cover'>
-                <img src='http://localhost/invait/wp-content/uploads/2024/01/logo-invait-retro.png'>
+                <img src='<?php echo get_theme_file_uri('assets/images/logo-invait.png');?>'>
             </div>
             <div class='invait-logo-cover__text mb-8'>Invait</div>
             <div class='desktop-cover__description'>Scroll ke atas dan ke bawah untuk melihat-lihat tema.</div>
@@ -73,7 +73,7 @@ $kategori = isset($_GET['filter']) ? $_GET['filter'] : 'Semua';
                 <img data-src='<?php echo get_field('thumbnail', $tema->ID); ?>'>
                 <div class='tema__content'>
                     <div class='invait-logo'>
-                        <img data-src='http://localhost/invait/wp-content/uploads/2024/01/logo-invait-retro.png'>
+                        <img data-src='<?php echo get_theme_file_uri('assets/images/logo-invait.png');?>'>
                     </div>
                     <div class='tema__kategori'>
                         <?php echo slugToSentence($kategori);
@@ -148,7 +148,7 @@ $kategori = isset($_GET['filter']) ? $_GET['filter'] : 'Semua';
 
         </div>
         <div class='invait-logo-cover'>
-            <img src='http://localhost/invait/wp-content/uploads/2024/01/logo-invait-retro.png'>
+            <img src='<?php echo get_theme_file_uri('assets/images/logo-invait.png');?>'>
         </div>
         <div class='invait-logo-cover__text mb-8'>Invait</div>
         <div class='desktop-cover__description'>Scroll ke atas dan ke bawah untuk melihat-lihat tema.</div>

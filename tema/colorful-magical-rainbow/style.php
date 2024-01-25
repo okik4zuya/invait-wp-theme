@@ -1,23 +1,26 @@
 <?php
 $title = get_field('tema');
-
-$cover_background = get_site_url() . '/wp-content/uploads/2023/12/pexels-dmitry-zvolskiy-1676123-Small.jpg';
-$galeri1 = get_site_url() . '';
+$cover_background = get_field('cover_background');
 
 ?>
 <style>
-    @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Hedvig+Letters+Serif:opsz@12..24&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Chewy&display=swap');
+    @font-face {
+        font-family: 'Bugaki';
+        src: url('<?php echo get_theme_file_uri('assets/fonts/BugakiRegular.ttf'); ?>') format('truetype');
+    }
 
     :root {
-        --font-base: 'Hedvig Letters Serif', serif;
-        --font-art: 'Great Vibes', cursive;
+        --font-base: 'Bugaki';
+        --font-art: 'Chewy', cursive;
         --fs-judul: 3em;
         --fs-paragraf: 1em;
         --fw-judul: 700;
         --fw-paragraf: 400;
-        --color-bg: #000000;
-        --color-base: #c8a051;
-        --color-base-transparent25: #c8a05140;
+        --color-bg: #2b394d;
+        --color-bg-transparent25: #2b394d80;
+        --color-base: #dbd293;
+        --color-base-transparent25: #dbd29340;
         --waving-deg: 5deg;
     }
 
@@ -27,7 +30,7 @@ $galeri1 = get_site_url() . '';
 
     body {
         background-color: #000000;
-        color: #c8a051;
+        color: var(--color-base);
         font-family: var(--font-base);
         box-sizing: border-box;
     }
@@ -36,7 +39,8 @@ $galeri1 = get_site_url() . '';
         width: 100%;
     }
 
-    input, textarea {
+    input,
+    textarea {
         padding: .5rem 1rem;
         width: 100%;
         border-radius: 8px;
@@ -69,11 +73,83 @@ $galeri1 = get_site_url() . '';
         cursor: pointer;
         text-decoration: none;
     }
+    /*Animation*/
+
+    @keyframes continuous-sliding-left {
+        0% {
+            -ms-transform: translateX(150%);
+            -moz-transform: translateX(150%);
+            -webkit-transform: translateX(150%);
+            -o-transform: translateX(150%);
+            transform: translateX(150%);
+        }
+
+        100% {
+            -ms-transform: translateX(-150%);
+            -moz-transform: translateX(-150%);
+            -webkit-transform: translateX(-150%);
+            -o-transform: translateX(-150%);
+            transform: translateX(-150%);
+        }
+
+    }
+
+    .continuous-sliding-left {
+        -webkit-animation: continuous-sliding-left 6s linear infinite;
+        -moz-animation: continuous-sliding-left 6s linear infinite;
+        -ms-animation: continuous-sliding-left 6s linear infinite;
+        -o-animation: continuous-sliding-left 6s linear infinite;
+        animation: continuous-sliding-left 6s linear infinite;
+    }
 
     /*Image Background Setting*/
+    .custom-bg-image{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: -1;
+        height: 100%
+
+    }
+    .custom-bg-image img{
+        height: 100%;
+        object-position: center;
+        object-fit: cover;
+        -o-object-position: center;
+        -o-object-fit: cover;
+    }
     .bg-image {
         background-position: center;
         background-size: cover;
+    }
+    .or-t{
+        position: absolute;
+        top: 0;
+        right: -4rem;
+        z-index: 0;
+        height: 16rem;
+    }
+    .or-m-1{
+        position: absolute;
+        top: 20%;
+        left: 10%
+        z-index: 0;
+        width: 60px;
+    }
+    .or-m-cloud{
+        position: absolute;
+        top: 40%;
+        right: 10%
+        z-index: 0;
+        width: 200px;
+    }
+    .or-b{
+        position: absolute;
+        bottom: -.5rem;
+        left: 0;
+        width: 100%;
     }
 
     #desktop-cover {
@@ -82,8 +158,6 @@ $galeri1 = get_site_url() . '';
 
     #floating-cover {
         background-color: var(--color-bg);
-        /*background-image: url('<?php echo $cover_background ?>
-        ');*/
 
     }
 
@@ -168,7 +242,7 @@ $galeri1 = get_site_url() . '';
         width: 100vw;
     }
 
-    #audio{
+    #audio {
         position: fixed;
         left: 16px;
         bottom: 16px;
@@ -181,10 +255,10 @@ $galeri1 = get_site_url() . '';
         display: flex;
         justify-content: center;
         align-items: center;
-        
+
     }
 
-    #audio .audio__icon{
+    #audio .audio__icon {
         width: 28px;
         height: 28px;
     }
@@ -212,8 +286,7 @@ $galeri1 = get_site_url() . '';
         justify-content: center;
         align-items: center;
         overflow: hidden;
-        background-color: var(--color-bg);
-        
+
     }
 
     #floating-cover {
@@ -232,18 +305,24 @@ $galeri1 = get_site_url() . '';
 
     }
 
-    .ornament-left {
+    .ornament-top-left {
         position: absolute;
-        width: 160px;
-        top: 0;
-        left: -1.5rem;
+        width: 450px;
+        top: -180px;
+        left: -280px;
     }
 
-    .ornament-right {
+    .ornament-top-right {
         position: absolute;
-        width: 120px;
-        bottom: -1rem;
-        right: .5rem;
+        width: 500px;
+        top: -160px;
+        right: -320px;
+    }
+    .ornament-bottom {
+        position: absolute;
+        bottom: -100px;
+        right: 0;
+        left: 0;
     }
 
     .light-bubble-top {
@@ -279,7 +358,7 @@ $galeri1 = get_site_url() . '';
 
 
     .mempelai {
-        font-family: var(--font-base);
+        font-family: var(--font-art);
         font-size: 2rem;
         text-align: center;
     }
@@ -307,16 +386,18 @@ $galeri1 = get_site_url() . '';
         text-align: center;
     }
 
-    .avatar1, .avatar2{
+    .avatar1,
+    .avatar2 {
         width: 200px;
         height: 200px;
         overflow: hidden;
         border-radius: 50%;
         margin: 0 auto 1rem;
-        
+
     }
-    
-    .avatar1 img, .avatar2 img{
+
+    .avatar1 img,
+    .avatar2 img {
         width: 100%;
         object-position: center;
         object-fit: cover;
@@ -350,8 +431,27 @@ $galeri1 = get_site_url() . '';
 
     .acara__akad,
     .acara__resepsi {
+        margin: 2rem 1rem;
+        padding: 1rem;
+        text-align: center;
+    }
+    .acara__ornament{
+        position: absolute;
+        top: -6rem;
+        bottom: -6rem;
+        left: -6rem;
+        right: -6rem;
+        background-repeat: no-repeat;
+        background-image: url('<?php echo $ornament_top; ?>');
+        background-size: contain;
+        background-position: center;
+        z-index: 0;
+    }
+    .acara__konten{
+        position: relative;
         border: solid 4px var(--color-base);
-        margin: 1rem;
+        z-index: 1;
+        background-color: var(--color-bg-transparent25);
         padding: 1rem;
         text-align: center;
     }
@@ -440,7 +540,7 @@ $galeri1 = get_site_url() . '';
         font-size: 1.5rem;
     }
 
-    #footer{
+    #footer {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -448,14 +548,16 @@ $galeri1 = get_site_url() . '';
         padding: 1rem 0;
         margin-bottom: 4rem;
     }
-    #footer a{
+
+    #footer a {
         text-decoration: none;
-        background-color: var(--color-base);
-        color: var(--color-bg);
         border-radius: 8px;
-        padding: .25rem .5rem;
+        padding: .25rem .25rem;
         margin: 0 0 0 .25rem;
 
+    }
+    #footer img{
+        height: 2rem;
     }
 
     @media screen and (min-width: 768px) {
@@ -474,10 +576,6 @@ $galeri1 = get_site_url() . '';
             right: 40vw;
         }
 
-        #invitation-container {
-            position: relative;
-
-        }
 
         #floating-cover {
             display: none;

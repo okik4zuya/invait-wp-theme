@@ -484,12 +484,13 @@ $ornament_top = get_site_url() . '/wp-content/uploads/2024/01/wedding-navy-gold-
 
     #footer a {
         text-decoration: none;
-        background-color: var(--color-base);
-        color: var(--color-bg);
         border-radius: 8px;
-        padding: .25rem .5rem;
+        padding: .25rem .25rem;
         margin: 0 0 0 .25rem;
 
+    }
+    #footer img{
+        height: 2rem;
     }
 
     @media screen and (min-width: 768px) {

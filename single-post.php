@@ -7,6 +7,7 @@ while (have_posts()) {
     <?php
     //Include style
     include('css/lib/aos.css');
+    include('css/lib/splide.css');
     include('css/animation.css');
     ?>
 </style>

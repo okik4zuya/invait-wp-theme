@@ -7,7 +7,7 @@
 
 <div class='main-container'>
     <div class='invait-logo-cover'>
-        <img src='http://localhost/invait/wp-content/uploads/2024/01/logo-invait-retro.png'>
+        <img src='<?php echo get_theme_file_uri('assets/images/logo-invait.png');?>'>
     </div>
     <div class='invait-logo-cover__text mb-8'>Invait</div>
     <div class='frame opening'>

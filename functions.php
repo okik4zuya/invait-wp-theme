@@ -6,6 +6,7 @@
 require(get_theme_file_path('/inc/rest/rest-filter-message.php'));
 require(get_theme_file_path('/inc/rest/rest-post-message.php'));
 require(get_theme_file_path('/inc/rest/rest-get-tema.php'));
+require(get_theme_file_path('/inc/rest/rest-get-invitation-by-slug.php'));
 require(get_theme_file_path('/inc/rest/rest-get-total-tema.php'));
 
 //Helpers Functions
